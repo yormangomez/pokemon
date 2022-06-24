@@ -5,10 +5,9 @@ part 'settings_event.dart';
 part 'settings_state.dart';
 
 class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
-  SettingsBloc() : super(SettingsState(0)) {
+  SettingsBloc() : super(SettingsInitial()) {
     on<PageTapped>((event, emit) {
-      // TODO: implement event handler
-      emit(SettingsState(event.indexCouter));
+      emit(SettingsPaged(newCouterIndex: event.indexCouter));
     });
   }
 }

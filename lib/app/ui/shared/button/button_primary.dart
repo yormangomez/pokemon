@@ -6,22 +6,20 @@ class ButtonPrimary extends AbstractButton {
   const ButtonPrimary({
     Function()? onPressed,
     Widget? title,
-    required Color colorButtom,
   }) : super(
           onPressed: onPressed,
           title: title,
-          colorButtom: colorButtom,
         );
 
   @override
   Widget build(BuildContext context) => Padding(
         padding: const EdgeInsets.all(8.0),
         child: MaterialButton(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          minWidth: 241,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+          minWidth: 250,
           elevation: 5.0,
-          height: 64.0,
-          color: colorButtom,
+          height: 48.0,
+          color: UIColors.redButton,
           onPressed: onPressed,
           child: title,
         ),
